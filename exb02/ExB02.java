@@ -26,13 +26,11 @@ public class ExB02{
 
 		instructors.add("Sandy Schillebeeckx");
 		instructors.add("Luigi Instructore");
-		
-		if(numberOfDays > 3 && priorKnowledgeNeeded){
-			totalPriceVatIncl = pricePerDay * numberOfDays ;
-		}
-		else{
-			totalPriceVatIncl = pricePerDay * numberOfDays + ((pricePerDay * numberOfDays) * VATPERCENTAGE / 100);
-		}
+
+		totalPriceVatIncl = pricePerDay * numberOfDays ;
+		if(!(numberOfDays > 3 && priorKnowledgeNeeded)){
+			totalPriceVatIncl = totalPriceVatIncl + ( totalPriceVatIncl * VATPERCENTAGE / 100);
+		}		
 
 		System.out.println("Course");
         System.out.println("Title :  " + title);
