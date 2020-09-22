@@ -12,7 +12,7 @@ public class ExB03{
 		*/	
 		
 		for(int number:integerArray){
-				total = total+number;
+				total += number;
 		}
 		
 		average=total/integerArray.length;

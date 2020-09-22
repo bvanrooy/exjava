@@ -29,7 +29,7 @@ public class ExB01{
 		
 		totalPriceVatIncl = pricePerDay * numberOfDays ;
 		if(!(numberOfDays > 3 && priorKnowledgeNeeded)){
-			totalPriceVatIncl = totalPriceVatIncl + ( totalPriceVatIncl * VATPERCENTAGE / 100);
+			totalPriceVatIncl += ( totalPriceVatIncl * VATPERCENTAGE / 100);
 		}
 
 		System.out.println("Course");
