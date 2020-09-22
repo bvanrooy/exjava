@@ -5,8 +5,14 @@ public class ExB03{
 		double total=0;
 		double average;
 		
+		/*
 		for(int i=0;i<integerArray.length;i++){
 				total = total+integerArray[i];
+		}
+		*/	
+		
+		for(int number:integerArray){
+				total = total+number;
 		}
 		
 		average=total/integerArray.length;
