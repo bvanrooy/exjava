@@ -100,15 +100,12 @@ public class ExD01{
 	
 	private static ArrayList<String> getInstructorsFromFile(){
 		ArrayList<String> instructors = new ArrayList<>();
-		try(BufferedReader br = Files.newBufferedReader(Paths.get("instructors.txt"))) {
+		try(BufferedReader br = Files.newBufferedReader(Paths.get("instructors11.txt"))) {
 			String line;
 			while ((line = br.readLine()) != null) {
 				instructors.add(line);
 			}
 		}
-		catch(FileNotFoundException ex){
-			System.out.println("\n\nERROR Instructor file not found\n\n");
-			}
 		catch(IOException ex){
 			System.out.println("\n\nERROR Error reading instructor file\n\n");
 			}
