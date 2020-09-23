@@ -1,13 +1,8 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Scanner; 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.FileWriter;
+import java.util.Scanner;
 
 public class ExD02{
 
@@ -92,28 +87,24 @@ public class ExD02{
 			total += ( total * VATPERCENTAGE / 100);
 		}		
 		return total;
-	}	
+	}
 
-	
-	private static ArrayList<String> getInstructorsFromFile(){
+
+	private static ArrayList<String> getInstructorsFromFile() {
 		ArrayList<String> instructors = new ArrayList<>();
-		try(BufferedReader br = new BufferedReader(new FileReader("instructors.txt"))) {
-			String line = br.readLine();
-			while (line != null) {
+		try (BufferedReader br = Files.newBufferedReader(Paths.get("instructors.txt"))) {
+			String line;
+			while ((line = br.readLine()) != null) {
 				instructors.add(line);
-				line = br.readLine();
 			}
-		}
-		catch(FileNotFoundException ex){
+		} catch (FileNotFoundException ex) {
 			System.out.println("\n\nERROR Instructor file not found\n\n");
-			}
-		catch(IOException ex){
+		} catch (IOException ex) {
 			System.out.println("\n\nERROR Error reading instructor file\n\n");
-			}
+		}
 
 		return instructors;
 	}
-	
 	
 	private static ArrayList<String>getCourseInfo(String title, int numberOfDays, double pricePerDay, double totalPriceVatIncl, boolean priorKnowledgeNeeded,ArrayList<String> instructors){
 		ArrayList<String> lines = new ArrayList<>();
@@ -135,9 +126,10 @@ public class ExD02{
 	}
 	
 	private static void writeInfoToFile(ArrayList<String> lines){
-			Path file = Paths.get("courseinfo.txt");
-		try {
-			Files.write(file,lines);
+		try (BufferedWriter bw = Files.newBufferedWriter(Paths.get("courseinfo.txt"))){
+			for(String line:lines){
+				bw.write(line + "\n");
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

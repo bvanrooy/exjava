@@ -1,9 +1,9 @@
 Course
 -----------------------------------
 Title :  test
-Number of days : 4
-Price / day : 365.0
-Total Price VAT Incl : 1460.0
+Number of days : 6
+Price / day : 187.0
+Total Price VAT Incl : 1122.0
 OK
 Prior knowledge needed : true
 Number of instructors : 3
