@@ -1,0 +1,9 @@
+Salary of sandy s at 23 is 2000.0
+Salary of sandy s at 28 is 2060.0
+Salary of sandy s at 33 is 2121.8
+Salary of sandy s at 38 is 2185.454
+Salary of sandy s at 43 is 2251.01762
+Salary of sandy s at 48 is 2318.5481486000003
+Salary of sandy s at 53 is 2388.1045930580003
+Salary of sandy s at 58 is 2459.7477308497405
+Maximum salary reached
