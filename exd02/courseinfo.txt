@@ -1,0 +1,14 @@
+Course
+-----------------------------------
+Title :  test
+Number of days : 4
+Price / day : 365.0
+Total Price VAT Incl : 1460.0
+OK
+Prior knowledge needed : true
+Number of instructors : 3
+		Instructor : Sandy Schillebeeckx
+		Instructor : Luigi Instructore
+		Instructor : Obi Wan Kenobi
+
+-----------------------------------------------------------
