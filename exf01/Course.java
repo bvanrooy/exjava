@@ -85,26 +85,26 @@ public class Course{
         }
     }
 
-    private double calculateTotalPriceVATIncl(Course course){
+    private double calculateTotalPriceVATIncl(){
         double total = 0;
-        total = course.getPricePerDay() * course.getNumberOfDays();
-        if(!(course.getNumberOfDays() > 3 && course.isPriorKnowledgeNeeded()) ){
+        total = this.pricePerDay * this.numberOfDays;
+        if(!(this.numberOfDays > 3 && this.priorKnowledgeNeeded) ){
             total += ( total * VATPERCENTAGE / 100);
         }
         return total;
     }
 
 
-    private ArrayList<String>getCourseInfo(Course course){
+    private ArrayList<String>getCourseInfo(){
         ArrayList<String> lines = new ArrayList<>();
-        double total = calculateTotalPriceVATIncl(course);
+        double total = calculateTotalPriceVATIncl();
 
         lines.add("Course\n-----------------------------------------------------");
-        lines.add("Title                   :  " + course.getTitle());
-        lines.add("Number of days          : " + course.getNumberOfDays());
-        lines.add("Price / day             : " + course.getPricePerDay());
+        lines.add("Title                   : " + this.title);
+        lines.add("Number of days          : " + this.numberOfDays);
+        lines.add("Price / day             : " + this.pricePerDay);
         lines.add("Total Price VAT Incl    : " +  total + " (" + getPriceCategory(total) + ")");
-        lines.add("Prior knowledge needed  : " +  course.isPriorKnowledgeNeeded());
+        lines.add("Prior knowledge needed  : " +  this.priorKnowledgeNeeded);
         lines.add("Number of instructors   : " + instructors.size());
         for (String instructorForCourse : instructors) {
             lines.add("\t\tInstructor : " + instructorForCourse);
@@ -116,14 +116,14 @@ public class Course{
 
 
     public void printInfo(){
-        for (String line :  getCourseInfo(this)) {
+        for (String line :  getCourseInfo()) {
             System.out.println(line);
         }
     }
 
     public void  writeInfoToFile() throws IOException {
-        try (BufferedWriter bw = Files.newBufferedWriter(Paths.get("courseinfo.txt"), StandardOpenOption.APPEND)){
-            for(String line:getCourseInfo(this)){
+        try (BufferedWriter bw = Files.newBufferedWriter(Paths.get("courseinfo.txt"), StandardOpenOption.CREATE, StandardOpenOption.APPEND)){
+            for(String line:getCourseInfo()){
                 bw.write(line + "\n");
             }
         }

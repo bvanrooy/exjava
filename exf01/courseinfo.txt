@@ -1,17 +1,6 @@
 Course
 -----------------------------------------------------
-Title                   :  Spring fundamentals
-Number of days          : 3
-Price / day             : 211.0
-Total Price VAT Incl    : 765.9300000000001 (OK)
-Prior knowledge needed  : true
-Number of instructors   : 1
-		Instructor : The spring guru
-
------------------------------------------------------------
-Course
------------------------------------------------------
-Title                   :  Java fundamentals
+Title                   : Java fundamentals
 Number of days          : 5
 Price / day             : 333.0
 Total Price VAT Incl    : 2014.65 (EXPENSIVE)
@@ -23,7 +12,7 @@ Number of instructors   : 2
 -----------------------------------------------------------
 Course
 -----------------------------------------------------
-Title                   :  Java advanced
+Title                   : Java advanced
 Number of days          : 5
 Price / day             : 253.0
 Total Price VAT Incl    : 1265.0 (OK)
@@ -35,7 +24,7 @@ Number of instructors   : 2
 -----------------------------------------------------------
 Course
 -----------------------------------------------------
-Title                   :  Spring fundamentals
+Title                   : Spring fundamentals
 Number of days          : 3
 Price / day             : 211.0
 Total Price VAT Incl    : 765.9300000000001 (OK)
