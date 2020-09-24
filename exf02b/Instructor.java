@@ -49,7 +49,7 @@ public class Instructor{
     }
 
 
-    public void printSalaryHistory(int startAge, double startSalary) {
+    public void printSalaryHistory(int startAge, double startSalary) throws IOException {
         int seniority = 0;
         int age = startAge;
         double salaryAtAge = startSalary;
@@ -78,8 +78,6 @@ public class Instructor{
                 }
             }
 
-        } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 }
